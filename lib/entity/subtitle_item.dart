@@ -10,16 +10,16 @@ class SubtitleItem {
     type = json['type'];
     attributes =
         json['attributes'] != null
-            ? new AttributesSubtitleItem.fromMap(json['attributes'])
+            ? AttributesSubtitleItem.fromMap(json['attributes'])
             : null;
   }
 
   Map<String, dynamic> toMap() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['type'] = this.type;
-    if (this.attributes != null) {
-      data['attributes'] = this.attributes!.toMap();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['type'] = type;
+    if (attributes != null) {
+      data['attributes'] = attributes!.toMap();
     }
     return data;
   }
@@ -120,23 +120,23 @@ class AttributesSubtitleItem {
     legacyUploaderId = json['legacy_uploader_id'];
     uploader =
         json['uploader'] != null
-            ? new Uploader.fromMap(json['uploader'])
+            ? Uploader.fromMap(json['uploader'])
             : null;
     featureDetails =
         json['feature_details'] != null
-            ? new FeatureDetails.fromMap(json['feature_details'])
+            ? FeatureDetails.fromMap(json['feature_details'])
             : null;
     url = json['url'];
     if (json['related_links'] != null) {
       relatedLinks = <RelatedLinks>[];
       json['related_links'].forEach((v) {
-        relatedLinks!.add(new RelatedLinks.fromMap(v));
+        relatedLinks!.add(RelatedLinks.fromMap(v));
       });
     }
     if (json['files'] != null) {
       files = <Files>[];
       json['files'].forEach((v) {
-        files!.add(new Files.fromMap(v));
+        files!.add(Files.fromMap(v));
       });
     }
   }
@@ -174,42 +174,42 @@ class AttributesSubtitleItem {
   }
 
   Map<String, dynamic> toMap() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['subtitle_id'] = this.subtitleId;
-    data['language'] = this.language;
-    data['download_count'] = this.downloadCount;
-    data['new_download_count'] = this.newDownloadCount;
-    data['hearing_impaired'] = this.hearingImpaired;
-    data['hd'] = this.hd;
-    data['fps'] = this.fps;
-    data['votes'] = this.votes;
-    data['ratings'] = this.ratings;
-    data['from_trusted'] = this.fromTrusted;
-    data['foreign_parts_only'] = this.foreignPartsOnly;
-    data['upload_date'] = this.uploadDate;
-    if (this.fileHashes != null) {
-      data['file_hashes'] = this.fileHashes!.map((v) => v).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['subtitle_id'] = subtitleId;
+    data['language'] = language;
+    data['download_count'] = downloadCount;
+    data['new_download_count'] = newDownloadCount;
+    data['hearing_impaired'] = hearingImpaired;
+    data['hd'] = hd;
+    data['fps'] = fps;
+    data['votes'] = votes;
+    data['ratings'] = ratings;
+    data['from_trusted'] = fromTrusted;
+    data['foreign_parts_only'] = foreignPartsOnly;
+    data['upload_date'] = uploadDate;
+    if (fileHashes != null) {
+      data['file_hashes'] = fileHashes!.map((v) => v).toList();
     }
-    data['ai_translated'] = this.aiTranslated;
-    data['nb_cd'] = this.nbCd;
-    data['slug'] = this.slug;
-    data['machine_translated'] = this.machineTranslated;
-    data['release'] = this.release;
-    data['comments'] = this.comments;
-    data['legacy_subtitle_id'] = this.legacySubtitleId;
-    data['legacy_uploader_id'] = this.legacyUploaderId;
-    if (this.uploader != null) {
-      data['uploader'] = this.uploader!.toMap();
+    data['ai_translated'] = aiTranslated;
+    data['nb_cd'] = nbCd;
+    data['slug'] = slug;
+    data['machine_translated'] = machineTranslated;
+    data['release'] = release;
+    data['comments'] = comments;
+    data['legacy_subtitle_id'] = legacySubtitleId;
+    data['legacy_uploader_id'] = legacyUploaderId;
+    if (uploader != null) {
+      data['uploader'] = uploader!.toMap();
     }
-    if (this.featureDetails != null) {
-      data['feature_details'] = this.featureDetails!.toMap();
+    if (featureDetails != null) {
+      data['feature_details'] = featureDetails!.toMap();
     }
-    data['url'] = this.url;
-    if (this.relatedLinks != null) {
-      data['related_links'] = this.relatedLinks!.map((v) => v.toMap()).toList();
+    data['url'] = url;
+    if (relatedLinks != null) {
+      data['related_links'] = relatedLinks!.map((v) => v.toMap()).toList();
     }
-    if (this.files != null) {
-      data['files'] = this.files!.map((v) => v.toMap()).toList();
+    if (files != null) {
+      data['files'] = files!.map((v) => v.toMap()).toList();
     }
     return data;
   }
@@ -229,10 +229,10 @@ class Uploader {
   }
 
   Map<String, dynamic> toMap() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['uploader_id'] = this.uploaderId;
-    data['name'] = this.name;
-    data['rank'] = this.rank;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['uploader_id'] = uploaderId;
+    data['name'] = name;
+    data['rank'] = rank;
     return data;
   }
 }
@@ -267,14 +267,14 @@ class FeatureDetails {
   }
 
   Map<String, dynamic> toMap() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['feature_id'] = this.featureId;
-    data['feature_type'] = this.featureType;
-    data['year'] = this.year;
-    data['title'] = this.title;
-    data['movie_name'] = this.movieName;
-    data['imdb_id'] = this.imdbId;
-    data['tmdb_id'] = this.tmdbId;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['feature_id'] = featureId;
+    data['feature_type'] = featureType;
+    data['year'] = year;
+    data['title'] = title;
+    data['movie_name'] = movieName;
+    data['imdb_id'] = imdbId;
+    data['tmdb_id'] = tmdbId;
     return data;
   }
 }
@@ -293,10 +293,10 @@ class RelatedLinks {
   }
 
   Map<String, dynamic> toMap() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['label'] = this.label;
-    data['url'] = this.url;
-    data['img_url'] = this.imgUrl;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['label'] = label;
+    data['url'] = url;
+    data['img_url'] = imgUrl;
     return data;
   }
 }
@@ -315,10 +315,10 @@ class Files {
   }
 
   Map<String, dynamic> toMap() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['file_id'] = this.fileId;
-    data['cd_number'] = this.cdNumber;
-    data['file_name'] = this.fileName;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['file_id'] = fileId;
+    data['cd_number'] = cdNumber;
+    data['file_name'] = fileName;
     return data;
   }
 
